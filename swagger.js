@@ -8,7 +8,7 @@ const options = {
             version: "1.0.0",
             description: "CRUD API using MySQL, Sequelize, Node.js"
         },
-        servers: [{ url: "http://localhost:5000" }],
+        servers: [{ url: process.env.BASE_URL||"http://localhost:5000" }],
         components: {
             schemas: {
                 User: {
