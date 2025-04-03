@@ -1,3 +1,4 @@
+require("dotenv").config();
 const swaggerJSDoc = require("swagger-jsdoc");
 
 const options = {
@@ -8,7 +9,7 @@ const options = {
             version: "1.0.0",
             description: "CRUD API using MySQL, Sequelize, Node.js"
         },
-        servers: [{ url: process.env.BASE_URL||"http://localhost:5000" }],
+        servers: [{ url: process.env.DB_URL||"http://localhost:5000" }],
         components: {
             schemas: {
                 User: {
